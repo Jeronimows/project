@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations Responsives</title>
+    <style>
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #282c34;
+            font-family: Arial, sans-serif;
+            color: white;
+            perspective: 1000px; /* Nécessaire pour les effets 3D */
+        }
+
+        .animation {
+            text-align: center;
+            margin: 20px;
+        }
+
+        /* Texte avec animation 2D */
+        .animated-text-2d {
+            font-size: 2rem;
+            animation: slide-in 3s ease-in-out infinite alternate, color-change 5s linear infinite;
+        }
+
+        /* Texte avec animation 3D */
+        .animated-text-3d {
+            font-size: 2rem;
+            animation: rotate-3d 4s ease-in-out infinite, color-change 5s linear infinite;
+        }
+
+        /* Texte effet "tape à la machine" */
+        .animated-text-typing {
+            font-size: 2rem;
+            font-family: 'Courier New', Courier, monospace;
+            white-space: nowrap; /* Empêche le retour à la ligne */
+            overflow: hidden; /* Cache le texte en dehors de la largeur */
+            border-right: 3px solid white; /* Curseur simulé */
+            animation: typing 4s steps(30, end), blink 0.6s step-end infinite;
+        }
+
+        /* Modèle de boîte */
+        .box {
+            width: 100px;
+            height: 100px;
+            margin-top: 20px;
+            background: linear-gradient(45deg, #ff5733, #3357ff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            animation: box-spin 3s infinite ease-in-out;
+        }
+
+        /* Animation de rotation de la boîte */
+        @keyframes box-spin {
+            0% {
+                transform: rotateY(0deg) rotateX(0deg);
+            }
+            50% {
+                transform: rotateY(180deg) rotateX(180deg);
+            }
+            100% {
+                transform: rotateY(360deg) rotateX(360deg);
+            }
+        }
+
+        /* Animation de déplacement (2D) */
+        @keyframes slide-in {
+            from {
+                transform: translateX(-10%);
+            }
+            to {
+                transform: translateX(10%);
+            }
+        }
+
+        /* Animation de rotation 3D */
+        @keyframes rotate-3d {
+            0% {
+                transform: rotateY(0deg);
+            }
+            50% {
+                transform: rotateY(180deg);
+                color: #33ff57;
+            }
+            100% {
+                transform: rotateY(360deg);
+            }
+        }
+
+        /* Animation de changement de couleur */
+        @keyframes color-change {
+            0% {
+                color: #ff5733;
+            }
+            50% {
+                color: #33ff57;
+            }
+            100% {
+                color: #3357ff;
+            }
+        }
+
+        /* Animation effet "tape à la machine" */
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        /* Animation du curseur clignotant */
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        /* Requêtes média */
+        @media (max-width: 400px) {
+            .animated-text-2d, .animated-text-3d, .animated-text-typing {
+                font-size: 1.5rem; /* Réduction de la taille des textes */
+            }
+            .box {
+                width: 80px;
+                height: 80px; /* Réduction de la taille de la boîte */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .animated-text-2d, .animated-text-3d, .animated-text-typing {
+                font-size: 1rem; /* Réduction encore plus importante des textes */
+            }
+            .box {
+                width: 60px;
+                height: 60px; /* Boîte encore plus petite */
+                animation: none; /* Désactivation de l'animation de la boîte pour économiser les ressources */
+            }
+        }
+        /* Texte dans un nouveau div avec animation et effets */
+.new-text-effect {
+    font-size: 2rem;
+    color: #f0f0f0;
+    animation: slide-in 3s ease-in-out infinite alternate, color-change 5s linear infinite;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7), 0px 0px 25px rgba(255, 255, 255, 0.5);
+    filter: blur(1px); /* Effet de flou léger */
+}
+
+/* Animation de déplacement (2D) */
+@keyframes slide-in {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(50%);
+    }
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="animation">
+        <p class="animated-text-2d">Bienvenue dans le monde des animations 2D !</p>
+    </div>
+    <div class="animation">
+        <p class="animated-text-3d">Bienvenue dans le monde des animations 3D !</p>
+    </div>
+    <div class="animation">
+        <p class="animated-text-typing">Machine à écrire</p>
+    </div>
+    <div class="box">
+        Boîte
+    </div>
+    <div class="animation">
+        <p class="new-text-effect"> Ombre et flou</p>
+    </div>
+    
+</body>
+</html>
+

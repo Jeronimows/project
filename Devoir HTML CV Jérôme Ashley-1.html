@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Jérôme Ashley</title>
+    <style>
+        /* Corps de la page */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Style du conteneur principal */
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            border: 2px solid #00aaff;
+            animation: pulse-border 3s infinite;
+        }
+
+        /* Effet d'animation pour le cadre */
+        @keyframes pulse-border {
+            0%, 100% {
+                border-color: #00aaff;
+            }
+            50% {
+                border-color: #005f80;
+            }
+        }
+
+        /* Style des titres principaux avec animation */
+        h1, h2 {
+            text-align: center;
+            color: #00aaff;
+            margin-bottom: 10px;
+            position: relative;
+            animation: move-title 3s infinite alternate ease-in-out;
+        }
+
+        @keyframes move-title {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /* Style des images */
+        img {
+            display: block;
+            margin: 10px auto;
+            border-radius: 50%;
+            border: 3px solid #00aaff;
+        }
+
+        /* Style des paragraphes et div */
+        div {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        /* Style des liens hypertexte */
+        a {
+            color: #00aaff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Jérôme Ashley</h1>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Bruce_Lee_1973.jpg" alt="Portrait" style="width: 200px; height: 200px;">
+
+        <h2>Informations</h2>
+        <div>Âge : 30 ans</div>
+        <div>Date de naissance : 5/04/1994</div>
+        <div>Lieu de naissance : Etterbeek</div>
+        <div>Permis B</div>
+
+        <h2>Diplômes et études</h2>
+        <div>CESS technique sociale - 2013 IVB à Braine l'Alleud</div>
+        <div>2013-2014 Étude de droit à l'UCL à Louvain-la-Neuve</div>
+        <div>2014-2015 Étude de commerce extérieur à l'EPHEC à Woluwe</div>
+        <div>2015-2017 Diplôme de Technicien chauffagiste et frigoriste</div>
+
+        <h2>Expérience professionnelle</h2>
+        <div>2010-2011 : Job étudiant Pizza-Hut à Braine-l'Alleud</div>
+        <div>2012-2014 : "Juicer" dans un bar à smoothie à Nivelles</div>
+        <div>2015-2017 : Technicien HVAC pour différentes entreprises</div>
+        <div>2017-2021 : Indépendant installateur chauffagiste/frigoriste</div>
+        <div>2021-Aujourd'hui : Création de l'entreprise "Solu-Confort SRL"</div>
+        <div>2022-Aujourd'hui : Création de <a href="https://www.ramonagepro.be">RamoPRO</a></div>
+        <div>2024-Aujourd'hui : Création de <a href="https://www.digitalbati.com">Digital Bati</a></div>
+
+        <h2>Hobby</h2>
+        <div>Navigation en mer, entrepreneuriat, informatique, sport</div>
+    </div>
+</body>
+</html>

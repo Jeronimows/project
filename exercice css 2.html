@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   <style>
+    h1 {
+      font-size: 36px;
+      color: #333;
+      position: relative;
+      display: inline-block;
+    }
+
+    h1::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0;
+      height: 3px;
+      background: #007BFF;
+      transition: width 0.3s ease;
+    }
+    h1:hover::after {
+      width: 100%; 
+    }
+    div  p { color: #007BFF; }
+   .introduction::first-letter {
+      font-size: 3em;
+      color: #ff6347;
+      font-weight: bold;
+    }
+    h2 {
+      font-size: 24px;
+      color: #333;
+    }
+    h2 ~ p {
+      background-color: #ff78; 
+      font-size: 18px;
+    }
+  </style>
+</head>
+<h1>Menu restaurant</h1>
+<body>
+<div> 
+  <h2 class="introduction">Entrées</h2>
+    <p>Calamar frit  10€</p>
+    <p>Ravioli vapeur 7€</p>
+    <p>Nem poulet 5€</p>
+    <p>Suhsi thon 10€</p>
+</div>
+<div> 
+  <h2 class="introduction">Plats </h2>
+    <p>Steak frite 15€</p>
+    <p>Poisson à la provencale 19€</p>
+    <p>Pâtes carbonara 10€</p>
+    <p>Pizza chorizo 12€</p>
+
+</div>
+<div> 
+  <h2 class="introduction">Desserts</h2>
+    <p>Coeur fondant chocolat 5€</p>
+    <p>Dame blanche 6€</p>
+    <p>Tarte tatin 7€</p>
+    <p>Île flottante 9€</p>
+
+</div>
+<button class="button">Commander en ligne</button>
+</body>
+</html>
